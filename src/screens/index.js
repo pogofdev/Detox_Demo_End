@@ -25,9 +25,11 @@ import CardsInfo from './transitions/sharedElementTransitions/Cards/Info';
 
 import Masonry from './transitions/sharedElementTransitions/Masonry/Masonry';
 import MasonryItem from './transitions/sharedElementTransitions/Masonry/Item';
+import ReactSpinkit from "./ReactSpinkit";
 
 export function registerScreens() {
   Navigation.registerComponent('example.Types', () => Types);
+  Navigation.registerComponent('example.Spinkit', () => ReactSpinkit);
   Navigation.registerComponent('example.Actions', () => Actions);
   Navigation.registerComponent('example.Transitions', () => Transitions);
 

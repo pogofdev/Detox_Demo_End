@@ -1,10 +1,13 @@
 package com.awesomereact;
+import com.facebook.react.ReactApplication;
 import com.reactnativenavigation.NavigationApplication;
+import com.react.rnspinkit.RNSpinkitPackage;
 import com.facebook.react.ReactPackage;
+import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends NavigationApplication {
+public class MainApplication extends NavigationApplication implements ReactApplication {
 
 	@Override
 	public boolean isDebug() {
@@ -12,16 +15,12 @@ public class MainApplication extends NavigationApplication {
 		return BuildConfig.DEBUG;
 	}
 
-	protected List<ReactPackage> getPackages() {
-		// Add additional packages you require here
-		// No need to add RnnPackage and MainReactPackage
-		return Arrays.<ReactPackage>asList(
-			// eg. new VectorIconsPackage()
-		);
-	}
-
 	@Override
 	public List<ReactPackage> createAdditionalReactPackages() {
-		return getPackages();
+		    return Arrays.<ReactPackage>asList(
+                        new MainReactPackage(),
+                    new RNSpinkitPackage()
+
+                );
 	}
 }

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -50,6 +49,7 @@
 		BB729AF291CC4A5BAA65F477 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C60410CE054577AB4361F3 /* libRNVectorIcons.a */; };
 		DD964D9AF12245ED93C868DE /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B7D776A1AA745FF87343B54 /* EvilIcons.ttf */; };
 		EA028C1BCBD44928ADAC69EA /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D17896A276204520906ACB0C /* Feather.ttf */; };
+		D6C3A3AAF0B64A878061B5B3 /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB1AA0EB84F4823BBE85635 /* libRNSpinkit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,6 +362,8 @@
 		D17896A276204520906ACB0C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		EE744DEEEA924F35B4951F69 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		FC4717E5DBEC43F9A17168B2 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
+		238AD00158964D7FAA1EA892 /* RNSpinkit.xcodeproj */ = {isa = PBXFileReference; name = "RNSpinkit.xcodeproj"; path = "../node_modules/react-native-spinkit/ios/RNSpinkit.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		7FB1AA0EB84F4823BBE85635 /* libRNSpinkit.a */ = {isa = PBXFileReference; name = "libRNSpinkit.a"; path = "libRNSpinkit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,6 +394,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				BB729AF291CC4A5BAA65F477 /* libRNVectorIcons.a in Frameworks */,
 				9F865CCA9E144E7FB08D2A37 /* libReactNativeNavigation.a in Frameworks */,
+				D6C3A3AAF0B64A878061B5B3 /* libRNSpinkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,6 +607,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				35AECE28D05F45D79A281370 /* RNVectorIcons.xcodeproj */,
 				FC4717E5DBEC43F9A17168B2 /* ReactNativeNavigation.xcodeproj */,
+				238AD00158964D7FAA1EA892 /* RNSpinkit.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1233,6 +1237,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-navigationios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 				);
 				INFOPLIST_FILE = AwesomeReactTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1260,6 +1265,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-navigationios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 				);
 				INFOPLIST_FILE = AwesomeReactTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1288,6 +1294,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-navigationios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 				);
 				INFOPLIST_FILE = AwesomeReact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1311,6 +1318,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-navigationios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 				);
 				INFOPLIST_FILE = AwesomeReact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1341,6 +1349,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-navigationios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 				);
 				INFOPLIST_FILE = "AwesomeReact-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1377,6 +1386,7 @@
 					"$(SRCROOT)..\node_modules\neact-native-navigationios/**",
 					"$(SRCROOT)..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
 				);
 				INFOPLIST_FILE = "AwesomeReact-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

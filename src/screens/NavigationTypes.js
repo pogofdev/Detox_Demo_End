@@ -103,6 +103,13 @@ class NavigationTypes extends React.Component {
     });
   };
 
+  pushSpinkitExample = () =>{
+      this.props.navigator.showModal({
+          screen: 'example.Spinkit',
+          title: 'Modal',
+      });
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
@@ -115,8 +122,8 @@ class NavigationTypes extends React.Component {
         <Row title={'Show Modal'} onPress={this.showModal}/>
         <Row title={'Show Lightbox'} onPress={this.showLightBox}/>
         <Row title={'Show In-App Notification'} onPress={this.showInAppNotification}/>
-        <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.showInAppNotification}>
-          Login with Facebook
+        <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.pushSpinkitExample}>
+         Spinkit example
         </Icon.Button>
       </ScrollView>
     );
