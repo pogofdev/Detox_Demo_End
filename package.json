@@ -17,7 +17,8 @@
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-animatable": "^1.2.4",
-    "react-native-navigation": "^1.1.279"
+    "react-native-navigation": "^1.1.279",
+    "react-native-vector-icons": "^4.4.2"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",

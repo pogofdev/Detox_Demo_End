@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, ScrollView} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Row from '../components/Row';
 
 class NavigationTypes extends React.Component {
@@ -114,10 +115,15 @@ class NavigationTypes extends React.Component {
         <Row title={'Show Modal'} onPress={this.showModal}/>
         <Row title={'Show Lightbox'} onPress={this.showLightBox}/>
         <Row title={'Show In-App Notification'} onPress={this.showInAppNotification}/>
+        <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.showInAppNotification}>
+          Login with Facebook
+        </Icon.Button>
       </ScrollView>
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
