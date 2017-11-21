@@ -1,4 +1,6 @@
 import {Navigation, ScreenVisibilityListener} from 'react-native-navigation';
+import {Platform} from 'react-native';
+
 
 import Types from './NavigationTypes';
 import Actions from './Actions';
@@ -26,6 +28,7 @@ import CardsInfo from './transitions/sharedElementTransitions/Cards/Info';
 import Masonry from './transitions/sharedElementTransitions/Masonry/Masonry';
 import MasonryItem from './transitions/sharedElementTransitions/Masonry/Item';
 import ReactSpinkit from "./ReactSpinkit";
+import LoginScreen from "./Login/LoginScreen";
 
 export function registerScreens() {
   Navigation.registerComponent('example.Types', () => Types);
@@ -53,6 +56,74 @@ export function registerScreens() {
   Navigation.registerComponent('example.Transitions.SharedElementTransitions.Cards.Info', () => CardsInfo);
   Navigation.registerComponent('example.Transitions.SharedElementTransitions.Masonry', () => Masonry);
   Navigation.registerComponent('example.Transitions.SharedElementTransitions.Masonry.Item', () => MasonryItem);
+
+
+  Navigation.registerComponent('example.LoginScreen', () => LoginScreen);
+
+
+}
+
+export function showLoginForm() {
+    Navigation.startSingleScreenApp({
+        screen: {
+            screen: 'example.LoginScreen',
+            animationType: 'slide-down',// optional, add transition animation to root change: 'none', 'slide-down', 'fade'
+        },
+        portraitOnlyMode: true,
+        passProps: {},
+    });
+}
+
+export function showHomeScreen(){
+    const tabs = [{
+        label: 'Navigation',
+        screen: 'example.Types',
+        icon: require('../../img/list.png'),
+        title: 'Navigation Types',
+    }, {
+        label: 'Actions',
+        screen: 'example.Actions',
+        icon: require('../../img/swap.png'),
+        title: 'Navigation Actions',
+    }];
+
+    if (Platform.OS === 'android') {
+        tabs.push({
+            label: 'Transitions',
+            screen: 'example.Transitions',
+            icon: require('../../img/transform.png'),
+            title: 'Navigation Transitions',
+        });
+    }
+
+// this will start our app
+    Navigation.startTabBasedApp({
+        tabs,
+        animationType: Platform.OS === 'ios' ? 'slide-down' : 'fade',
+        tabsStyle: {
+            tabBarBackgroundColor: '#003a66',
+            tabBarButtonColor: '#ffffff',
+            tabBarSelectedButtonColor: '#ff505c',
+            tabFontFamily: 'BioRhyme-Bold',
+        },
+        appStyle: {
+            tabBarBackgroundColor: '#003a66',
+            navBarButtonColor: '#ffffff',
+            tabBarButtonColor: '#ffffff',
+            navBarTextColor: '#ffffff',
+            tabBarSelectedButtonColor: '#ff505c',
+            navigationBarColor: '#003a66',
+            navBarBackgroundColor: '#003a66',
+            statusBarColor: '#002b4c',
+            tabFontFamily: 'BioRhyme-Bold',
+        },
+        drawer: {
+            left: {
+                screen: 'example.Types.Drawer'
+            }
+        }
+    });
+
 }
 
 export function registerScreenVisibilityListener() {
