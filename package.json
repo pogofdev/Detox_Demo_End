@@ -31,10 +31,22 @@
   "devDependencies": {
     "babel-jest": "21.2.0",
     "babel-preset-react-native": "4.0.0",
+    "detox": "^5.10.0",
     "jest": "21.2.1",
+    "mocha": "^4.0.1",
     "react-test-renderer": "16.0.0"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/AwesomeReact.app",
+        "build": "xcodebuild -project ios/AwesomeReact.xcodeproj -scheme AwesomeReact -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
   }
 }

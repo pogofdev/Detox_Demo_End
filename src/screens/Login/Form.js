@@ -25,7 +25,7 @@ class FormLogin extends Component {
 
     _onPress() {
         const {userId} = this.state;
-        if(userId==='M0001'){
+        if(userId==='M001'){
             this.setState({wrongPass:false},()=>showHomeScreen());
         }else{
             this.setState({wrongPass:true});
